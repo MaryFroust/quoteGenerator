@@ -3,7 +3,7 @@ const randomBtn = document.querySelector('.btn')
 const input = document.querySelector('#input')
 const display = document.querySelector('.display')
 const randomURL = "https://api.quotable.io/random"
-const authorURL = "https://api.quotable.io/authors"
+const authorURL = "https://api.quotable.io/author"
 // const authorURL = (`https://api.quotable.io/quotes?author=${encodeURI(input.value)}?display=${response}`)
 const star = document.querySelector('.star')
 const read = document.querySelector('.read')
@@ -48,26 +48,26 @@ randomBtn.addEventListener('click', () => {
 })
 
 search.addEventListener('click', () => {
+    const authorURL = `https://api.quotable.io/quotes?author=${encodeURI(input.value)}`
    fetch(authorURL)
         .then((rawResponse) => {
-            return rawResponse.json()
+            console.log(rawResponse)
+            return rawResponse.json()  
         })
-        
         .then((response) => {
-            console.log(response)
-           if(input !== '')
-            
-        return fetch(`https://api.quotable.io/quotes?author${encodeURI(input.value)}?display=${response.results[0]}`)
-        display.innerText = (`Results: ${response.results}`)
-               display.innerText = (`Quote: ${response.results[0]}
-        // Author: ${response.results[0]}`)
-        // return 
-        
+            if(input.value !== ''){
+                if(response.results && response.results.length > 0){
+                    display.innerText = response.results[0].content
+                }
+            }
+          console.log(response)
         })
-        
+       
 })
-
-
+// ?display=${'response.results'}
+// return fetch(`https://api.quotable.io/quotes?author${encodeURI(input.value)}?display=${'response.results[0]'}`)
+//  display.innerText = (`Quote: ${response.results}
+            // Author: ${response.results}`)
 
 
 // search.addEventListener('click', () => {
