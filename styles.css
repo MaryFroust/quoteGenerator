@@ -68,8 +68,14 @@ img {
     border: 3px solid black;
     height: 45vh;
 }
+#favorites, #readLater{
+    border:3px solid black;
+    padding: 10px;
+    height:100px;
+    overflow: auto;
+}
 
-.midLeft1 {
+/* .midLeft1 {
     text-decoration: underline;
     display: flex;
     justify-content: center;
@@ -88,7 +94,7 @@ img {
     height: 15vh;
     width: 20vw;
     margin-top: 10%;
-}
+} */
 
 #quoteSection {
     color: aqua;

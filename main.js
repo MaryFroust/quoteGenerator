@@ -3,15 +3,12 @@ const randomBtn = document.querySelector('.btn')
 const input = document.querySelector('#input')
 const display = document.querySelector('#quoteSection')
 const randomURL = "https://api.quotable.io/random"
-const authorURL = "https://api.quotable.io/author"
-// const authorURL = (`https://api.quotable.io/quotes?author=${encodeURI(input.value)}?display=${response}`)
-const star = document.querySelector('.star')
-const read = document.querySelector('.read')
+const authorURL = "https://api.quotable.io/?author"
+
+const quoteBox=document.querySelector('.quoteBox')
 const favorites = document.querySelector('#favorites')
 const readLater = document.querySelector('#readLater')
 const currentQuote = ''
-
-
 
 randomBtn.addEventListener('click', () => {
 
@@ -23,26 +20,11 @@ randomBtn.addEventListener('click', () => {
             display.innerText = (`Quote: ${response.content}
 
                 Author: ${response.author}`)
+    
 
-            star.addEventListener('click', () => {
-                if (currentQuote !== '')
-                    return
-                const li = document.createElement('li')
-                li.textContent = `Quote: ${response.content} Author: ${response.author}`
-                favorites.appendChild(li)
-                star.classList.add('selected')
-                console.log(response)
-            })
-            read.addEventListener('click', () => {
-                if (currentQuote !== '')
-                    return
-                const li = document.createElement('li')
-                li.textContent = `${response.content} ${response.author}`
-                readLater.appendChild(li)
-                read.classList.add('selected')
-                return response
-                
-            })
+               
+                    
+
             console.log(response)
         })
 })
@@ -57,18 +39,50 @@ search.addEventListener('click', () => {
         .then((response) => {
             if(input.value !== ''){
                 if(response.results && response.results.length > 0){
-                    display.innerText = ''
+                   display.innerText = ''
                     response.results.forEach((quote)=>{
+
             const quoteDiv =document.createElement('div')
             quoteDiv.classList.add('quoteCard')
+
             const text =document.createElement('p')
             text.textContent=`"${quote.content}"`
+
             const author = document.createElement('p')
             author.textContent=`${quote.author}`
+
+            const favoriteBtn = document.createElement('button')
+            favoriteBtn.textContent = '⭐ Save' 
+            favoriteBtn.addEventListener('click', () => {
+                   alert(`Saved to Favorites: "${quote.content}"`)
+
+                const favLi = document.createElement('li')
+                favLi.textContent = `Quote: ${quote.content} Author: ${quote.author}`
+                favorites.appendChild(favLi)
+                favoriteBtn.classList.add('selected')
+                console.log(response)
+                })
+
+                const readBtn = document.createElement('button')
+                readBtn.textContent ='⋆.˚📚⋆.˚Read Later'
+                readBtn.addEventListener('click', () => {
+                   alert(`Saved to Read Later: "${quote.content}"`)
+
+                   const readLi = document.createElement('li')
+                   readLi.textContent =`Quote: ${quote.content} Author: ${quote.author}`
+                   readLater.appendChild(readLi)
+                   readBtn.classList.add('selected')
+                    
+                })
+
+               
 
             quoteDiv.appendChild(text)
             quoteDiv.appendChild(author)
             display.appendChild(quoteDiv)
+            quoteDiv.appendChild(favoriteBtn)
+            quoteDiv.appendChild(readBtn)
+            
                     })
                 }else{
                     display.innerText="No quotes found for that author"
