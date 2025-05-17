@@ -6,6 +6,7 @@ const randomURL = "https://api.quotable.io/random"
 const authorURL = "https://api.quotable.io/?author"
 
 const quoteBox=document.querySelector('.quoteBox')
+
 const favorites = document.querySelector('#favorites')
 const readLater = document.querySelector('#readLater')
 const currentQuote = ''
@@ -50,7 +51,8 @@ search.addEventListener('click', () => {
 
             const author = document.createElement('p')
             author.textContent=`${quote.author}`
-
+             
+            
             const favoriteBtn = document.createElement('button')
             favoriteBtn.textContent = '⭐ Save' 
             favoriteBtn.addEventListener('click', () => {
@@ -72,10 +74,10 @@ search.addEventListener('click', () => {
                    readLi.textContent =`Quote: ${quote.content} Author: ${quote.author}`
                    readLater.appendChild(readLi)
                    readBtn.classList.add('selected')
+
+                   return response
                     
                 })
-
-               
 
             quoteDiv.appendChild(text)
             quoteDiv.appendChild(author)
