@@ -1,7 +1,7 @@
 const search = document.querySelector('#button')
 const randomBtn = document.querySelector('.btn')
 const input = document.querySelector('#input')
-const display = document.querySelector('.display')
+const display = document.querySelector('#quoteSection')
 const randomURL = "https://api.quotable.io/random"
 const authorURL = "https://api.quotable.io/author"
 // const authorURL = (`https://api.quotable.io/quotes?author=${encodeURI(input.value)}?display=${response}`)
@@ -57,7 +57,21 @@ search.addEventListener('click', () => {
         .then((response) => {
             if(input.value !== ''){
                 if(response.results && response.results.length > 0){
-                    display.innerText = response.results[0].content
+                    display.innerText = ''
+                    response.results.forEach((quote)=>{
+            const quoteDiv =document.createElement('div')
+            quoteDiv.classList.add('quoteCard')
+            const text =document.createElement('p')
+            text.textContent=`"${quote.content}"`
+            const author = document.createElement('p')
+            author.textContent=`${quote.author}`
+
+            quoteDiv.appendChild(text)
+            quoteDiv.appendChild(author)
+            display.appendChild(quoteDiv)
+                    })
+                }else{
+                    display.innerText="No quotes found for that author"
                 }
             }
           console.log(response)
