@@ -10,14 +10,6 @@ body {
     padding: 10px;
     /* border:5px black; */
 }
-#content{
-    
-}
-/* #topImg {
-    display: block;
-    position: fixed;
-    background-size: cover;
-} */
 
 /* #content {
 display: flex;
@@ -69,9 +61,9 @@ img {
     color: aqua;
     text-shadow: 2px 2px 3px rgb(255, 0, 200);
     border-radius: 10px;
-    height: 20vh;  
+    height: 25vh;  
     width: 100%;
-   
+    
 }
 
 .quoteBox p {

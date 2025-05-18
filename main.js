@@ -17,7 +17,7 @@ const villaAudio= new Audio('mixkit-villa-penthouse-339.mp3')
 
 
 randomBtn.addEventListener('click', () => {
-    sereneAudio.play()
+    // sereneAudio.play()
     fetch(randomURL)
         .then((rawResponse) => {
             return rawResponse.json()
@@ -32,7 +32,7 @@ randomBtn.addEventListener('click', () => {
 })
 
 search.addEventListener('click', () => {
-    villaAudio.play()
+    // villaAudio.play()
     const authorURL = `https://api.quotable.io/quotes?author=${encodeURI(input.value)}`
    fetch(authorURL)
         .then((rawResponse) => {
