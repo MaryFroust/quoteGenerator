@@ -3,7 +3,7 @@ const randomBtn = document.querySelector('.btn')
 const input = document.querySelector('#userInput')
 const display = document.querySelector('#quoteSection')
 const randomURL = "https://api.quotable.io/random"
-const authorURL = "https://api.quotable.io/?author"
+// const authorURL = "https://api.quotable.io/?author"
 
 const quoteBox=document.querySelector('.quoteBox')
 
