@@ -1,6 +1,6 @@
 const search = document.querySelector('#button')
 const randomBtn = document.querySelector('.btn')
-const input = document.querySelector('#input')
+const input = document.querySelector('#userInput')
 const display = document.querySelector('#quoteSection')
 const randomURL = "https://api.quotable.io/random"
 const authorURL = "https://api.quotable.io/?author"
@@ -10,9 +10,14 @@ const quoteBox=document.querySelector('.quoteBox')
 const favorites = document.querySelector('#favorites')
 const readLater = document.querySelector('#readLater')
 const currentQuote = ''
+const sereneAudio = new Audio('mixkit-serene-view-443.mp3')
+const villaAudio= new Audio('mixkit-villa-penthouse-339.mp3')
+// sereneAudio.loop=true
+
+
 
 randomBtn.addEventListener('click', () => {
-
+    sereneAudio.play()
     fetch(randomURL)
         .then((rawResponse) => {
             return rawResponse.json()
@@ -22,15 +27,12 @@ randomBtn.addEventListener('click', () => {
 
                 Author: ${response.author}`)
     
-
-               
-                    
-
             console.log(response)
         })
 })
 
 search.addEventListener('click', () => {
+    villaAudio.play()
     const authorURL = `https://api.quotable.io/quotes?author=${encodeURI(input.value)}`
    fetch(authorURL)
         .then((rawResponse) => {
