@@ -60,6 +60,39 @@ img {
 .quoteBox {
     color: aqua;
     text-shadow: 1px 1px 2px rgb(255, 0, 200);
+    border-radius: 16px;
+    min-height: 180px;
+    width: 90%;
+    max-width: 700px;
+    margin: 24px auto;
+    padding: 32px 24px;
+    background: rgba(0,0,0,0.8);
+    box-shadow: 0 8px 32px 0 rgba(250, 4, 180, 0.25),
+                0 1.5px 10px 0 rgba(0,0,0,0.3);
+    transition: box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Enhance the text area inside quoteBox */
+.quoteBox p {
+    background-color: transparent;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.3em;
+    margin: 0;
+}
+.quoteBox:hover {
+    box-shadow: 0 12px 40px 0 rgba(250, 4, 180, 0.45),
+                0 2px 16px 0 rgba(0,0,0,0.4);
+}
+
+/* .quoteBox {
+    color: aqua;
+    text-shadow: 1px 1px 2px rgb(255, 0, 200);
     border-radius: 10px;
     height: 25vh;  
     width: 100%;
@@ -72,7 +105,7 @@ img {
     display: flex;
     justify-content: center;
     width: 50%;
-}
+} */
 
 #quoteSection {
     display: flex;
@@ -145,6 +178,7 @@ left:0;  */
     height: 12vh;
     /* width: 50%; */
     display: flex;
+    flex-direction: row;
     justify-content: center;
     border: 3px solid rgb(255, 0, 212);
     background-color: black;
@@ -188,3 +222,15 @@ h6 {
     padding-bottom: 50px;
 }
 /* https://maryfroust.github.io/quoteGenerator/ */
+
+@media (max-width: 600px) {
+    .quoteBox {
+        width: 98%;
+        padding: 18px 8px;
+        min-height: 100px;
+        font-size: 1em;
+    }
+    .quoteBox p {
+        font-size: 1em;
+    }
+}
