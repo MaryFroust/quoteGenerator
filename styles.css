@@ -1,63 +1,49 @@
 body {
+    background-size: cover;
+    background-image: url('https://media.istockphoto.com/id/1098067182/photo/background.jpg?s=612x612&w=0&k=20&c=bTPyLQNZp-GeHk6dZQbVN8iRZ9wVc4U3xJKgEi1SzAs=');
+    height: 100vh;
+    padding: 8px;
+}
+
+#content {
     display: flex;
     flex-direction: column;
-    /* background-image: url('https://media.istockphoto.com/id/1396968984/photo/peacock-feather-macro-of-peacock-feather-isolated-on-white.jpg?s=612x612&w=0&k=20&c=MAO-FFIYrjb4dKt2YHDD04wwGusezJ-mWo8_bpwUlTw='); */
-   background-size: cover;
-    background-image: url('https://media.istockphoto.com/id/1098067182/photo/background.jpg?s=612x612&w=0&k=20&c=bTPyLQNZp-GeHk6dZQbVN8iRZ9wVc4U3xJKgEi1SzAs=');
-    /* flex-direction: column; */
-    /* background-color: #81c28e; */
-    height: 100vh;
-    padding: 10px;
-    /* border:5px black; */
-}
-
-/* #content {
-display: flex;
-flex-direction: row;
-
     height: 95vh;
-    background-color: azure;
-    border: 3px solid black;
+    border: 10px solid black;
     border-radius: 4px;
-    justify-items: center;
-} */
+    box-shadow: 0 2px 16px rgb(16, 0, 0);
+}
 
 #header {
-    /* height: 20vh; */
-
-    display: flex;
-    /* flex-direction: row; */
-    border: 3px solid rgb(255, 0, 234);
-    justify-content: center;
-    /* position:relative; */
-}
-
-img {
+    background-image: url('https://as2.ftcdn.net/v2/jpg/00/64/85/05/1000_F_64850582_mMhufMxqj3q5dj50AE7gaDkY18nE7Xhk.jpg'); 
+    background-size: cover;
     height: 30vh;
-    width: 100vw;
     display: flex;
-    flex-direction: row;
-
+    border: 7px solid black;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px red;
+    justify-content: center;
+    text-decoration: underline solid black;
+    text-shadow: 1px 1px 2px rgb(248, 11, 181);
+    color: black;
 }
 
 #middle {
-    border: 3px  rgb(255, 0, 234);
-    /* background-image:url('https://as1.ftcdn.net/v2/jpg/04/10/18/14/1000_F_410181412_5CcBvgjtv2IsrSff0qh0hHJ63tZ0kX5f.jpg'); */
-    
+    height: 55vh;
     justify-content: center;
     display: flex;
     flex-direction: row;
+    border: 3px rgb(255, 0, 234);
 }
 
 .saved {
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    margin-top: 1%;
-    margin-left: 1%;
     width: 50%;
+    height: 65vh;
 }
 
-.quoteBox {
+/* .quoteBox {
     color: aqua;
     text-shadow: 1px 1px 2px rgb(255, 0, 200);
     border-radius: 16px;
@@ -67,15 +53,26 @@ img {
     margin: 24px auto;
     padding: 32px 24px;
     background: rgba(0,0,0,0.8);
-    box-shadow: 0 8px 32px 0 rgba(250, 4, 180, 0.25),
+    box-shadow: 0 8px 32px 0 rgba(4, 250, 37, 0.25),
                 0 1.5px 10px 0 rgba(0,0,0,0.3);
     transition: box-shadow 0.2s;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+} */
+
+.quoteBox {
+    justify-items: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(17, 10, 16);
+    border-radius: 10px;
+    height: 25vh;
+    width: 100%;
+    box-shadow: 0 2px 16px black;
+    margin-left: 2%;
 }
-/* Enhance the text area inside quoteBox */
+
 .quoteBox p {
     background-color: transparent;
     text-decoration: underline;
@@ -85,27 +82,11 @@ img {
     font-size: 1.3em;
     margin: 0;
 }
+
 .quoteBox:hover {
-    box-shadow: 0 12px 40px 0 rgba(250, 4, 180, 0.45),
-                0 2px 16px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 12px 40px 0 rgba(20, 250, 4, 0.45),
+        0 2px 16px 0 rgba(0, 0, 0, 0.4);
 }
-
-/* .quoteBox {
-    color: aqua;
-    text-shadow: 1px 1px 2px rgb(255, 0, 200);
-    border-radius: 10px;
-    height: 25vh;  
-    width: 100%;
-    
-}
-
-.quoteBox p {
-    background-color: black;
-    text-decoration: underline;
-    display: flex;
-    justify-content: center;
-    width: 50%;
-} */
 
 #quoteSection {
     display: flex;
@@ -115,112 +96,73 @@ img {
     color: rgb(250, 4, 180);
     text-shadow: 3px 3px 4px black;
     background-color: black;
-    height: 300px;
+    box-shadow: 0 2px 16px rgb(226, 5, 5);
+    height: 325px;
     width: 80vw;
     border: 5px solid aqua;
+    border-radius: 8px;
     margin: 3%;
     margin-top: 5%;
     padding: 5%;
-    background-image:url('https://as1.ftcdn.net/v2/jpg/04/10/18/14/1000_F_410181412_5CcBvgjtv2IsrSff0qh0hHJ63tZ0kX5f.jpg');
-
-    /* background-image: url('https://as1.ftcdn.net/v2/jpg/03/01/23/58/1000_F_301235857_NhqCczGN4LlOPiPXs1NJzfOp8DWNE16R.jpg'); */
-    
-    box-shadow: 0 4px 10px solid rgb(246, 2, 201);
-    font-size: large;
-    /* position: fixed;
-z-index: -1;
-display: block; */
-    /* height:100vh;
-width:100vw;*/
-    /* top:0; 
-left:0;  */
+    background-image: url('https://as1.ftcdn.net/v2/jpg/04/10/18/14/1000_F_410181412_5CcBvgjtv2IsrSff0qh0hHJ63tZ0kX5f.jpg');
 }
 
 #favorites,
 #readLater {
     border: 3px solid aqua;
-
-    height: 100px;
-
+    height: 150px;
+    width: 90%;
     overflow: auto;
     border-radius: 7px;
-    box-shadow: 0 4px 10px solid rgb(241, 2, 161);
+    box-shadow: 0 4px 10px solid rgb(17, 16, 16);
     background-color: black;
     text-shadow: rgb(255, 0, 200);
-
-    /* margin: 0%; */
-    /* display: flex;
-    flex-direction: column;
-    /* margin: 5%;  */
 }
-
-
-
-#userInput{
-    height: 8vh;
-    width: 30vw;
-    margin-top: 7px;
-}
-
- #button {
-    height: 7vh;
-    width: 20%;
-    /* color: black; */
-    /* cursor: pointer; */
-    transition: box-shadow 0.2s ease;
-    margin: 5px;
-    margin-top: 10px;
-    /* padding-top: 10%;  */
-
- } 
 
 #footer {
     height: 12vh;
-    /* width: 50%; */
+    width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    border: 3px solid rgb(255, 0, 212);
-    background-color: black;
-    color: aqua;
-    /* margin-left: 30%; */
-    margin-top: 1%;
-    /* height: 30%; */
-/* background-image: ('https://as2.ftcdn.net/v2/jpg/00/64/85/05/1000_F_64850582_mMhufMxqj3q5dj50AE7gaDkY18nE7Xhk.jpg'); */
+    align-items: center;
+    border: 8px solid black;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px #f60378;
+    background-image: url('https://i.pinimg.com/736x/3f/b1/c1/3fb1c1d02542f58304d4dc551bc112bc.jpg');
 }
 
+.btn-primary {
+    border: 3px solid aqua;
+    background-color: rgb(8, 11, 244);
+    color: rgb(250, 10, 182);
+    text-shadow: 1px 1px 2px #f4f8f4;
+    box-shadow: 0 2px 16px rgb(19, 0, 15);
+}
+
+#button {
+    transition: box-shadow 0.2s ease;
+    margin: 5px;
+    margin-left: 5%;
+    box-shadow: 0 2px 16px rgb(255, 0, 200);
+}
+
+#userInput {
+    box-shadow: 0 2px 16px rgb(255, 0, 200)
+}
 
 button:hover {
     box-shadow: 0 0 20px #07e934;
 }
 
-.btn-primary {
-    width: 30%;
-    height: 10vh;
-    border: 3px solid aqua;
-    background-color: rgb(8, 11, 244);
-    color: rgb(250, 10, 182);
-    text-shadow:1px 1px 2px #f4f8f4;
-    display: flex;
-    justify-content: center;
-    margin-left: 9px;
-    margin-top: 4px;
-}
-
-h1 {
-    text-decoration: underline solid black;
-    text-shadow: 1px 1px 2px rgb(248, 11, 181);
-    color: aqua;
-}
-
 h6 {
-    /* width: 80%; */
-    /* height: 50%; */
     display: flex;
     justify-content: center;
     text-decoration: underline;
     padding-bottom: 50px;
 }
+
 /* https://maryfroust.github.io/quoteGenerator/ */
 
 @media (max-width: 600px) {
@@ -230,6 +172,7 @@ h6 {
         min-height: 100px;
         font-size: 1em;
     }
+
     .quoteBox p {
         font-size: 1em;
     }
